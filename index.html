@@ -1,32 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Propuesta de Salida</title>
+    <title>Mi Niña</title>
 </head>
-
 <body>
     <div class="container">
-        <div class="Mainprompt">
-            <img class="image" src="images/catflower.jpg"></img>
-            <h1 class="hh" id="name">Hola</h1>
-            <p class="pp" id="question">Me Gustario invitarte a salir, Aceptas?</p>
-            <div class="buttons">
-                <button id="no-button" onclick="showMessage('No')">No</button>
-                <button onclick="showMessage('Yes')" id="yesButton">Yes</button>
-            </div>
-            <div class="hidden-message" id="no-message">
-                <p>Buen intento, pero no puedes escapar tan fácilmente!</p>
-            </div>
-            <div class="hidden-message" id="yes-message">
-                <p>¡Sabia que dirias que si!</p>
-            </div>
+        <div class="initial-content">
+            <h1>!HOLA MI AMOR, TENGO UN REGALO PARA TI!</h1>
+            <h2>"Quizas no pueda dartelos en Fisico y te pido disculpas pero si te los puedo dar de manera virtual"</h2>
+            <h3>Espero te Guste ❤ </h3>
+            <button id="showGiftButton">Oye</button>
+        </div>
+        <div id="gift" class="hidden">
+            <img src="https://theflowercenter.mx/cdn/shop/files/ramo_girasol_10__negro_1024x1024.jpg?v=1735327599" alt="Regalo" />
+            <p class="te-quiero">TE QUIERO MUCHISIMO KARLA 😘❤</p>
         </div>
     </div>
-    <script src="script.js"></script>
-</body>
 
+    <script>
+        document.getElementById('showGiftButton').onclick = function() {
+            document.querySelector('.initial-content').classList.add('hidden');
+            document.getElementById('gift').classList.remove('hidden');
+        };
+    </script>
+</body>
 </html>
